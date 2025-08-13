@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define dolar 5.40
+#define euro 6.31
+
+int main()
+{
+    float valor, pdolar, peuro;
+
+    printf("Convertendo real para dolar e euro\n");
+    printf("Digite o valor em reais (R$): ");
+    scanf("%f", &valor);
+
+    pdolar = valor * dolar;
+    peuro = valor * euro;
+
+    printf("O valor convertido para dolar e: %.2f\n", pdolar);
+    printf("O valor convertido para euro e: %.2f\n", peuro);
+
+    return 0;
+}
