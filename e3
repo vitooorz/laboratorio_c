@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float lap, alcool, gasolina, soalcool, sogasolina;
+
+    printf("Calcular o valor total para encher o tanque\n");
+    printf("Medidas do tanque - LAP (em metros): ");
+    scanf("%f", &lap);
+    printf("Preco por litros (alcool): ");
+    scanf("%f", &alcool);
+    printf("Preco por litros (gasolina): ");
+    scanf("%f", &gasolina);
+    
+    sogasolina = 
+
+
+    return 0;
+}
