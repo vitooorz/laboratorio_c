@@ -1,0 +1,107 @@
+QUESTAO 1:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float base, altura, perimetro;
+    float polegada, jardas;
+    printf("CALCULAR PERIMETRO\n");
+    printf("Digite a base: "); scanf("%f", &base);
+    printf("Digite a altura: "); scanf ("%f", &altura);
+
+    if (base <= 0 || altura <= 0) {
+        printf("ERRO: B e H > 0");
+        return 0;
+    }
+
+    perimetro = 2 * base + 2 * altura;
+    polegada = perimetro / 2.54;
+    jardas = (polegada * 0.03) / 1;
+
+    printf("O perimetro em cm: %.2f\n", perimetro);
+    printf("O perimetro em polegada: %.2f\n", polegada);
+    printf("O perimetro em jardas: %.2f\n", jardas);
+    return 0;
+}
+
+QUESTAO 2: 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float altura, homem, mulher;
+    int sexo;
+    printf("CALCULADORA DE PESO\n");
+    printf("Digite sua altura: "); scanf("%f", &altura);
+
+    if (altura <= 0) {
+        printf ("Erro: Altura invalida");
+        return 0;
+    }
+
+    printf("Digite seu sexo 1 para M e 2 para : "); scanf("%i", &sexo);
+
+    if (sexo == 1){
+        homem = (72.7 * altura) - 58;
+        printf("O peso ideal para o sexo masculino: %.2f KG\n", homem);
+    }
+
+    else if (sexo == 2) {
+        mulher = (62.1 * altura) - 44.7;
+        printf("O peso ideal para o sexo feminino: %.2f KG\n",mulher);
+    }
+
+    else {
+        printf("Sexo invalido");
+    }
+
+    return 0;
+}
+
+QUESTAO 3: 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int opcao;
+    float preco, porcento, reajuste;
+    printf("CALCULADORA DE PRECO\n");
+    printf("Digite o preco da mercadoria: "); scanf("%f", &preco);
+
+    if (preco <= 0) {
+        printf("Preco invalido");
+        return 0;
+    }
+
+    printf("Digite [1] para acrescimo e [2] para desconto: "); scanf("%i", &opcao);
+
+    if (opcao != 1 && opcao != 2) {
+        printf("Opcao invalida");
+        return 0;
+    }
+
+    printf("Digite o percentual: "); scanf("%f", &porcento);
+
+    if (porcento <= 0) {
+        printf("Percentual invalido");
+    }
+
+    else if (opcao == 1) {
+        reajuste = preco * (preco + porcento);
+        printf("Preco com acrescimo: %.2f R$", reajuste);
+    }
+
+    else if (opcao == 1) {
+        reajuste = preco * (preco - porcento);
+        printf("Preco com desconto: %.2f R$", reajuste);
+    }
+
+    return 0;
+}
+
